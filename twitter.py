@@ -35,6 +35,7 @@ try:
 						print 'retweet : '+stat.text+' from '+stat.user.screen_name
 					sleep(5)
 			old_stack = new_stack
+			
 		else : 
 			for stat in ment:
 				new_stack.append(stat.id)
@@ -42,7 +43,7 @@ try:
 					api.retweet(stat.id)
 				sleep(5)
 			old_stack = new_stack
-		sleep(5*60) # will update every 5 minute
+		sleep(5*60) # will update every 5 minutes
 
 except KeyboardInterrupt:
 	exit()
